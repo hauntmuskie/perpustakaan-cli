@@ -1,18 +1,30 @@
-## Getting Started
+## Program
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Program (Kerja Kelompok D) Perpustakaan CLI, Yang Menampilkan IO Sederhana
 
-## Folder Structure
+## Download Program
+Linux 
+```
+git clone https://github.com/hauntmuskie/perpustakaan-cli
+```
+Windows
+```
+https://github.com/hauntmuskie/perpustakaan-cli/archive/refs/heads/master.zip
+```
 
-The workspace contains two folders by default, where:
+## Struktur Program
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+`Import to VSCode / BlueJ Supported!`
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Ruang kerja berisi dua folder secara default, di mana:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- `src`: folder untuk menyimpan sumber
+- `lib`: folder untuk mempertahankan dependensi
 
-## Dependency Management
+Sementara itu, file output yang dikompilasi akan dibuat di folder `bin` secara default.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+> Jika Anda ingin menyesuaikan struktur folder, buka `.vscode/settings.json` dan perbarui pengaturan terkait di sana.
+
+## Manajemen Ketergantungan
+
+Tampilan `JAVA PROJECTS` memungkinkan Anda untuk mengelola dependensi Anda. Detail lebih lanjut dapat ditemukan [di sini](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).

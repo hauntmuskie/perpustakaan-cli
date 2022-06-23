@@ -237,8 +237,6 @@ class App {
                                 System.out.println("Silahkan Coba Lagi");
                                 System.exit(0);
                             }
-
-                    
                 }
 
             // Siti Mawwadah
