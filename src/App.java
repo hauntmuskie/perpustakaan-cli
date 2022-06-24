@@ -27,12 +27,13 @@ class App {
             double waktuPeminjam = 0.0;
 
             // Siti Mawaddah
-            String namaPetugas = "", Jabatan = "";
-            int jabatanPetugas = 0;;
+            String namaPetugas, nipPetugas, jeniskelaminPetugas, alamatPetugas, jabatanPetugas;
+            long notlpPetugas;
+
 
             // Egi Saputra
             String namaPeminjamPengembalian , kelasPeminjamPengembalian, prodiPeminjamPengembalian;
-            long npmPeminjamPengembalian, notlpPeminjamPengembalian;
+            long npmPeminjamPengembalian, notlpPeminjamPengembalian, noIsbnPengembalian;
 
 
         do {
@@ -182,7 +183,7 @@ class App {
                                     "=====================================================================================================\n" +
                                     "| 9789792204353 | Kamus Bahasa Indonesia |  Dendy Sygono |   Gramedia   |     2010     |     646    |\n" +
                                     "| 9786026673138 | Kamus Bahasa Korea     |  Tri Istiyani | Pusat kajian |     2017     |     307    |\n" +
-                                    "| 9786020379470 | Kamus kanji jepang     |    Maulyanti  |   Gramedia   |     2013     |     568    |\n" +
+                                    "| 9786020379470 | Kamus Kanji Jepang     |    Maulyanti  |   Gramedia   |     2013     |     568    |\n" +
                                     "+===================================================================================================+");
 
                         } else if (libraryBookInput == 2) {
@@ -298,90 +299,57 @@ class App {
                         // Siti Mawaddah
 
                         System.out.println();
-                        System.out.println("-----------------------------");
-                        System.out.println("|    Input Data Petugas     |");
-                        System.out.println("-----------------------------");
-                        System.out.print("Masukkan Nama : ");
+                        System.out.println("           Jadwal Petugas Perpustakaan          ");
+                        System.out.println("+==============================================+");
+                        System.out.println("|      Jam      |   Hari  |        Nama       |");
+                        System.out.println("+==============================================+");
+                        System.out.println("| 08.00 - 12.00 | Senin   | Zanna Kirania     |");
+                        System.out.println("| 13.00 - 17.00 | Senin   | Kaila Sherly      |");
+                        System.out.println("+==============================================+");
+                        System.out.println("| 08.00 - 12.00 | Selasa  | Azka Aqilla Wajdi |");
+                        System.out.println("| 13.00 - 17.00 | Selasa  | Daffa Ramdan      |");
+                        System.out.println("+==============================================+");
+                        System.out.println("| 08.00 - 12.00 | Rabu    | Kaila Sherly      |");
+                        System.out.println("| 13.00 - 17.00 | Rabu    | Zanna Kirania     |");
+                        System.out.println("+==============================================+");
+                        System.out.println("| 08.00 - 12.00 | Kamis   | Daffa Ramdan      |");
+                        System.out.println("| 13.00 - 17.00 | Kamis   | Azka Aqilla Wajdi |");
+                        System.out.println("+==============================================+");
+                        System.out.println("| 08.00 - 11.30 | Jumat   | Hanif Maqil       |");
+                        System.out.println("| 13.00 - 16.00 | Jumat   | Aqmar Nadhif      |");
+                        System.out.println("+==============================================+");
+                        System.out.println();
+                        System.out.println("Silahkan Isi Data Petugas...");
+                        System.out.println("+==================================================================================================================+");
+                        System.out.println("|         NIP        |        Nama       | Jenis Kelamin |       Jabatan       | No. Telepon  |       Alamat      |"); 
+                        System.out.println("====================================================================================================================");
+                        System.out.println("| 198609262015051001 | Aqmar Nadhif      | Laki-laki     | Kepala Perpustakaan | 081281229933 | Jl. Merpati 21    |");
+                        System.out.println("| 198305162019111002 | Hanif Maqil       | Laki-laki     | Waka Perpustakaan   | 087811905423 | Jl. Raflesia 19   |");
+                        System.out.println("| 199011092014021003 | Daffa Ramdan      | Laki-laki     | Pustakawan          | 085268320186 | Jl. Kayu Manis 03 |");
+                        System.out.println("| 198707102016082004 | Zanna Kirania     | Perempuan     | Pustakawan          | 081375621399 | Jl. Ahmad Yani 54 |");
+                        System.out.println("| 198508242017042005 | Azka Aqilla Wajdi | Perempuan     | Staff Administrasi  | 083801157321 | Jl. Nasional 5    |");
+                        System.out.println("| 198912112018052006 | Kaila Sherly      | Perempuan     | Staff Administrasi  | 089666315415 | Jl. Kemuning 12   |");
+                        System.out.println("+===================================================================================================================+");
+                        System.out.println();
+                        System.out.println("+===========================+");
+                        System.out.print("Masukkan NIP Petugas : ");
+                        nipPetugas = brInput.readLine();
+                        System.out.print("Masukkan Nama Petugas : ");
                         namaPetugas = brInput.readLine();
-                        
-                        System.out.println("-----------------------------");
-                        System.out.println("| No |        Jabatan       |");
-                        System.out.println("-----------------------------");
-                        System.out.println("| 1  | Kepala Perpustakaan  |");
-                        System.out.println("| 2  | Waka Perpustakaan    |");
-                        System.out.println("| 3  | Pustakawan           |");
-                        System.out.println("| 4  | Staff Administrasi   |");
-                        System.out.println("-----------------------------");
-                        System.out.print("Masukkan Jabatan : ");
-                        jabatanPetugas = Integer.valueOf(brInput.readLine());
-                        
-
-                        if (jabatanPetugas == 1) {
-                            Jabatan = "Kepala Perpustakaan";
-                            System.out.println("Jabatan Anda : " + Jabatan);
-                        } else if (jabatanPetugas == 2) {
-                            Jabatan = "Waka Perpustakaan";
-                            System.out.println("Jabatan Anda : " + Jabatan);
-                        } else if (jabatanPetugas == 3) {
-                            Jabatan = "Pustakawan";
-                            System.out.println("Jabatan Anda : " + Jabatan);
-                        } else if (jabatanPetugas == 4) {
-                            Jabatan = "Staff Administrasi";
-                            System.out.println("Jabatan Anda : " + Jabatan);
-                        }
-                        
-                        // long userPhone;
-                        // System.out.print("Masukkan No. Telepon : ");
-                        // userPhone = Long.valueOf(userInput.nextLine());
-                        // System.out.print("Masukkan Alamat : ");
-                        // String userAlamat = userInput.nextLine();
-                        
-                        // int terlambat,denda,buku;
-                        // int bayar,total;
+                        System.out.print("Masukkan Jenis Kelamin Petugas : ");
+                        jeniskelaminPetugas = brInput.readLine();
+                        System.out.print("Masukkan Jabatan Petugas : ");
+                        jabatanPetugas = brInput.readLine();
+                        System.out.print("Masukkan No. Telepon Petugas : ");
+                        notlpPetugas = Long.valueOf(brInput.readLine());
+                        System.out.print("Masukkan Alamat Petugas : ");
+                        alamatPetugas = brInput.readLine();
+                        System.out.println("+===========================+");
+                        System.out.println();
                         
 
                         // Comunicate With Peminjaman
                         
-                        // System.out.println("------------------------------");
-                        // System.out.println("|       Transaksi Denda      |");
-                        // System.out.println("------------------------------");
-                        // System.out.print("Jumlah Buku Yang Di Pinjam : ");
-                        // buku = baca.nextInt();
-                        // System.out.print("Jumlah Hari Keterlambatan  : ");
-                        // terlambat = baca.nextInt ();
-                        // if(terlambat >=10){
-                        //     bayar = buku * 5000;
-                        //     System.out.println("Denda Yang Dibayar : " + bayar);
-                        // } else if(terlambat >6 && terlambat <=9) {
-                        //     bayar = buku * 1500;
-                        //     System.out.println("Denda Yang Dibayar : " + bayar);
-                        // } else if (terlambat >3 && terlambat <=6){
-                        //     bayar = buku * 1000;
-                        //     System.out.println("Denda Yang Dibayar : " + bayar);
-                        // } else if (terlambat >1 && terlambat <=3){
-                        //     bayar = buku * 500;
-                        //     System.out.println("Denda Yang Dibayar : " + bayar);
-                        // } else {
-                        //     bayar = buku * 0;
-                        //     System.out.println("Denda Yang Dibayar : " +bayar);
-                        // }
-
-                        // System.out.println();
-                        // System.out.println("-------------------------------------");
-                        // System.out.println("|            Data Petugas           |");
-                        // System.out.println("-------------------------------------");
-                        // System.out.println(" Jadwal Tugas     : " + new Date());
-                        // System.out.println(" Nama Petugas     : " + userNama);
-                        // System.out.println(" Jabatan          : " + Jabatan);
-                        // System.out.println(" No. Telepon      : " + userPhone);
-                        // System.out.println(" Alamat           : " + userAlamat);
-                        // System.out.println();
-                        // System.out.println("-------------------------------------");
-                        // System.out.println("|           Transaksi Denda         |");
-                        // System.out.println("-------------------------------------");
-                        // System.out.println(" Jumlah Buku Yang Di Pinjam : " + buku);
-                        // System.out.println(" Jumlah Hari Keterlambatan  : " + terlambat);
-                        // System.out.println(" Denda Yang Dibayar         : " + bayar);
 
                     } while (!(libraryBookInput == 1 || libraryBookInput == 2 || libraryBookInput == 3));
 
@@ -400,27 +368,25 @@ class App {
                     System.out.print("Silahkan Masukkan No.Tlp Anda : ");
                     notlpPeminjamPengembalian = Long.parseLong(brInput.readLine());
                     System.out.print("Silahkan Masukkan Program Studi Anda : ");
-                    prodiPeminjamPengembalian = brInput.readLine();  
+                    prodiPeminjamPengembalian = brInput.readLine(); 
+                    System.out.println("Masukkan Tanggal Peminjaman Anda : ");
+                    int tanggalPeminjaman = Integer.valueOf(brInput.readLine());
+                    System.out.println("Masukkan Tanggal Peminjaman Anda : ");
+                    System.out.print("Masukkan No.ISBN Buku Yang Dipinjam : "); 
+                    noIsbnPengembalian = Long.valueOf(brInput.readLine());
 
                     // To be continued soon
-                    // JOptionPane.showMessageDialog(null), ;
-                    
-                    // System.out.println("\n");
-                    // System.out.println("-----------------------------------------------");
-                    // System.out.println("|                DATA PENGEMBALIAN              |");
-                    // System.out.println("-----------------------------------------------");
-                    // System.out.println(“KODE PEMINJAMAN :’’ + kodePINJAMAN);
-                    // System.out.println(" TANGGAL PEMINJAMAN         : " + dataPeminjam );
-                    // System.out.println(" HARI PEMINJAMAN           : " + hariPeminjam );
-                    // System.out.println(“PUKUL PEMINJAMAN  :”+ pukulPEMINJAMAN); 
-                    // System.out.println(‘’JUMLAH HARI :’’ + jumlahHari);
-                    // System.out.println(‘’JUMLAH DENDA :’’ +jumlahDENDA);
-                    // System.out.println(‘’KODE PETUGAS :’’ +kodePETUGAS);
-                    // System.out.println(‘’KODE ANGGOTA :’’ + kodeAnggota);
-                    // System.out.println(KODE BUKU :’’ + kodeBUKU);
-                    // System.out.println(" KELAS          : " + kelasPengembaliaan);
-                    // System.out.println(" NO.TLP         : " + notlpPengembaliaan);
-                    // System.out.println(" PROGRAM STUDI  : " + prodiPengembaliaan);
+
+                    System.out.println("\n");
+                    System.out.println("-----------------------------------------------");
+                    System.out.println("|                DATA PENGEMBALIAN              |");
+                    System.out.println("-----------------------------------------------");
+                    System.out.println("TANGGAL PEMINJAMAN   : " + tanggalPeminjaman);
+                    // System.out.println("JUMLAH DENDA         : " +jumlahDENDA);
+                    System.out.println("No Isbn              : " + noIsbnPengembalian);
+                    System.out.println("KELAS                : " + kelasPeminjamPengembalian);
+                    System.out.println("NO.TLP               : " + notlpPeminjamPengembalian);
+                    System.out.println("PROGRAM STUDI        : " + prodiPeminjamPengembalian);
                     // System.out.println("-----------------------------------------------");
 
                 } else if (nextMenuInput == 3) {
@@ -434,30 +400,14 @@ class App {
 
             } while (!(nextMenuInput == 1 || nextMenuInput == 2) || nextMenuInput == 3);
 
-            for (i = 0; i < tahunTerbit.length; i++) {                                    
-                
-                JOptionPane.showMessageDialog(null, "Nama Peminjam : " + namaPeminjam +
-                "\nNPM Peminjam : " + npmPeminjam + 
-                "\nKelas Peminjam : " + kelasPeminjam + 
-                "\nNo. Tlp Peminjam : " + notlpPeminjam + 
-                "\nProgram Studi Peminjam : " + prodiPeminjam + 
-                "\nHari/Tanggal Peminjaman : " + hariPeminjam + 
-                "\nJam Peminjaman : " + waktuPeminjam + 
-                "\nJabatan Petugas : " + jabatanPetugas + 
-                "\nNama Petugas : " + namaPetugas + 
-                "\n\n" +
-                "|------------------------------------------------------------------------------====------------------------|\n" + 
-                "|       No.ISBN        |      Judul      |    Pengarang    |    Penerbit   |  Tahun Terbit  |  Jumlah Hal  |\n" +
-                "|----------------------------------------------------------------------------------------------------------|\n" + 
-                "|  " + noIsbn[i] + "   |  " + judulBuku[i] + "  |  " + namaPengarang[i] + "   |  " + namaPenerbit[i] + "  |  " + tahunTerbit[i] + " |  "+ jumlahHal[i] +"|" + " \n" +
-                "|----------------------------------------------------------------------------------------------------------|\n" +
-                "Halaman Pinjaman Ke-" + (i + 1) + " : ", "Hasil Semua Data", JOptionPane.INFORMATION_MESSAGE);
-            }
+            // Print All Data
 
             tryAgain = JOptionPane.showConfirmDialog(null, "Apakah Anda Ingin Mengulangi Program Ini Lagi?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
             
             if (tryAgain == JOptionPane.NO_OPTION) {
+
                 System.exit(0);
+
             } else if (tryAgain == JOptionPane.YES_OPTION) {
 
                 if (userMenuInput == 1) {
