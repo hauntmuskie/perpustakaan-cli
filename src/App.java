@@ -214,39 +214,40 @@ class App {
                     if (!(libraryBookInput == 1 || libraryBookInput == 2 || libraryBookInput == 3)) {
                         System.out.println("Pilihan Anda Tidak Valid!, Silahkan Coba Lagi [1/2/3]");
                     }
-
-                } while (!(libraryBookInput == 1 || libraryBookInput == 2 || libraryBookInput == 3));
                     
-                if (libraryBookInput == 1) {
-                    System.out.println("Anda Memilih Buku Kamus\nMemuat Data Buku..");
-                    System.out.println("+===================================================================================================+\n" +
-                            "|    No.ISBN    |       Judul Buku       |   Pengarang   |   Penerbit   | Tahun Terbit | Jumlah Hal |\n" +  
-                            "=====================================================================================================\n" +
-                            "| 9789792204353 | Kamus Bahasa Indonesia |  Dendy Sygono |   Gramedia   |     2010     |     646    |\n" +
-                            "| 9786026673138 |   Kamus Bahasa Korea   |  Tri Istiyani | Pusat kajian |     2017     |     307    |\n" +
-                            "| 9786020379470 |   Kamus Kanji Jepang   |    Maulyanti  |   Gramedia   |     2013     |     568    |\n" +
-                            "+===================================================================================================+");
+                    } while (!(libraryBookInput == 1 || libraryBookInput == 2 || libraryBookInput == 3));
+                    
+                    if (libraryBookInput == 1) {
+                        System.out.println("Anda Memilih Buku Kamus\nMemuat Data Buku..");
+                        System.out.println("+===================================================================================================+\n" +
+                                "|    No.ISBN    |       Judul Buku       |   Pengarang   |   Penerbit   | Tahun Terbit | Jumlah Hal |\n" +  
+                                "=====================================================================================================\n" +
+                                "| 9789792204353 | Kamus Bahasa Indonesia |  Dendy Sygono |   Gramedia   |     2010     |     646    |\n" +
+                                "| 9786026673138 |   Kamus Bahasa Korea   |  Tri Istiyani | Pusat kajian |     2017     |     307    |\n" +
+                                "| 9786020379470 |   Kamus Kanji Jepang   |    Maulyanti  |   Gramedia   |     2013     |     568    |\n" +
+                                "+===================================================================================================+");
 
-                } else if (libraryBookInput == 2) {
-                    System.out.println("Anda Memilih Buku Pengetahuan\nMemuat Data Buku..");
-                    System.out.println("+=================================================================================================+\n" +
-                            "|    No.ISBN    |     Judul Buku      |    Pengarang   |   Penerbit   | Tahun Terbit | Jumlah Hal |\n" +  
-                            "===================================================================================================\n" +
-                            "| 9786024538361 |  Aplikasi Komputer  | Yenny Iskandar |  Deepublish  |     2018     |     262    |\n" +
-                            "| 9786022803690 | Teknologi Informasi |  Edy Irwansyah |  Deepublish  |     2014     |     339    |\n" +
-                            "| 9786026673343 |   Pemrograman Web   | Didik Setiawan |   Gramedia   |     2017     |     217    |\n" +
-                            "+==================================================================================================+");
-                                
-                } else if (libraryBookInput == 3) {
-                    System.out.println("Anda Memilih Buku Kamus dan Buku \nMemuat Data Buku..");
-                    System.out.println("+==================================================================================================================+\n" +
-                            "|    No.ISBN    |           Judul Buku           |   Pengarang   |      Penerbit     | Tahun Terbit |  Jumlah Hal  |\n" +  
-                            "====================================================================================================================\n" +
-                            "| 9786027153523 |       Ensiklopedia Sains       | Sri Winarsih  |      Gramedia     |     2020     |      137     |\n" +
-                            "| 9796853086    |   Ensiklopedia Sastra Modern   | Dendy Sugono  |  Remaja Rosdakara |     2003     |      371     |\n" +
-                            "| 9786230101533 | Ensikoledia Teknologi Komputer | Purindraswari |        Andi       |     2019     |      272     |\n" +
-                            "+===================================================================================================================+");       
-                }
+                    } else if (libraryBookInput == 2) {
+                        System.out.println("Anda Memilih Buku Ilmu Pengetahuan\nMemuat Data Buku..");
+                        System.out.println("+=================================================================================================+\n" +
+                                "|    No.ISBN    |     Judul Buku      |    Pengarang   |   Penerbit   | Tahun Terbit | Jumlah Hal |\n" +  
+                                "===================================================================================================\n" +
+                                "| 9786024538361 |  Aplikasi Komputer  | Yenny Iskandar |  Deepublish  |     2018     |     262    |\n" +
+                                "| 9786022803690 | Teknologi Informasi |  Edy Irwansyah |  Deepublish  |     2014     |     339    |\n" +
+                                "| 9786026673343 |   Pemrograman Web   | Didik Setiawan |   Gramedia   |     2017     |     217    |\n" +
+                                "+=================================================================================================+");
+                                    
+                    } else if (libraryBookInput == 3) {
+                        System.out.println("Anda Memilih Buku Ensiklopedia\nMemuat Data Buku..");
+                        System.out.println("+==================================================================================================================+\n" +
+                                "|    No.ISBN    |           Judul Buku           |   Pengarang   |      Penerbit     | Tahun Terbit |  Jumlah Hal  |\n" +  
+                                "====================================================================================================================\n" +
+                                "| 9786027153523 |       Ensiklopedia Sains       | Sri Winarsih  |      Gramedia     |     2020     |      137     |\n" +
+                                "| 9796853086    |   Ensiklopedia Sastra Modern   | Dendy Sugono  |  Remaja Rosdakara |     2003     |      371     |\n" +
+                                "| 9786230101533 | Ensikoledia Teknologi Komputer | Purindraswari |        Andi       |     2019     |      272     |\n" +
+                                "+==================================================================================================================+");
+                            
+                    }
 
                     JOptionPane.showMessageDialog(null, "Ketentuan Peminjaman\n" +
                     "1. Buku Hanya Bisa Dipinjam Maks 7 Hari\n" +
@@ -267,12 +268,12 @@ class App {
                     jumlahHal = new long[libraryBookQuantity];
                         
                     for (i = 0; i < libraryBookQuantity; i++) {
-                        
+                    
                         if (i <= libraryBookQuantity) {
-                            System.out.println("+==================================================+");
-                            System.out.println(" Data Buku Ke-" + (i + 1) + " : ");
+                        System.out.println("+==================================================+");
+                        System.out.println(" Data Buku Ke-" + (i + 1) + " : ");
                         }
-                        
+                    
                         System.out.print(" Masukkan No.ISBN        : ");
                         noIsbn[i] = Long.parseLong(brInput.readLine());
                             
@@ -290,13 +291,13 @@ class App {
                             
                         System.out.print(" Masukkan Jumlah Hal     : ");
                         jumlahHal[i] = Long.parseLong(brInput.readLine());
-
+                            
                     }
                     
                     // Informasi
                     System.out.println("+==================================================+");
-                    System.out.println("       Buku Telah Berhasil Diinput Ke Sistem");
-                    System.out.println("       Silahkan Ikuti Instruksi Selanjutnya");
+                    System.out.println("       Buku Telah Berhasil Diinput Ke Sistem        ");
+                    System.out.println("       Silahkan Ikuti Instruksi Selanjutnya         ");
                     System.out.println("+==================================================+");           
 
 
@@ -477,6 +478,7 @@ class App {
                     System.out.println("| Pengarang       | " + namaPengarang[i]);
                     System.out.println("| Penerbit        | " + namaPenerbit[i]);
                     System.out.println("| Tahun Terbit    | " + tahunTerbit[i]);
+                    System.out.println("| Jumlah Halaman  | " + jumlahHalaman[i]);
             }
 
             System.out.println("+========================================+");
