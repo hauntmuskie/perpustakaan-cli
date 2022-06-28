@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Date;
 
-class App {
+class Kelompok4 {
 
     public static void main(String[] args) throws IOException {
         // Class Input
@@ -479,7 +479,7 @@ class App {
                     System.out.println("| Pengarang       | " + namaPengarang[i]);
                     System.out.println("| Penerbit        | " + namaPenerbit[i]);
                     System.out.println("| Tahun Terbit    | " + tahunTerbit[i]);
-                    System.out.println("| Jumlah Halaman  | " + jumlahHalaman[i]);
+                    System.out.println("| Jumlah Halaman  | " + jumlahHal[i]);
             }
 
             System.out.println("+========================================+");
