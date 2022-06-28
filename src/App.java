@@ -159,42 +159,43 @@ class App {
                         System.exit(0);
                     }
 
-                do {
-                    // Farden Ramzy Muharram
-                    System.out.println();
-                    System.out.println("Form Data Diri..");
-                    System.out.println("+========================================================+");
-                    System.out.println("Dimohon Untuk Mengisi Data Diri Anda");
-                    System.out.println("+========================================================+");
-                    System.out.println();
-                    System.out.print("Silahkan Masukkan Nama Lengkap Anda   : ");
-                    namaPeminjam = brInput.readLine();
-                    System.out.print("Silahkan Masukkan NPM Anda    : ");
-                    npmPeminjam = Long.valueOf(brInput.readLine());
-                    System.out.print("Silahkan Masukkan Kelas Anda  : ");
-                    kelasPeminjam = brInput.readLine();
-                    System.out.print("Silahkan Masukkan No.Tlp Anda : ");
-                    notlpPeminjam = Long.valueOf(brInput.readLine());
-                    System.out.print("Silahkan Masukkan Program Studi Anda : ");
-                    prodiPeminjam = brInput.readLine();
-                    System.out.print("Silahkan Masukkan Hari Peminjaman (Contoh : Senin) : ");
-                    hariPeminjam = brInput.readLine();
-                    System.out.print("Silahkan Masukkan Jam Peminjaman (Contoh : 23.46) : ");
-                    waktuPeminjam = Double.parseDouble(brInput.readLine());
-                    System.out.print("\nYakin Sudah Mengisi Data Diri Anda Dengan Benar (y/N): ");
-                    lanjut = brInput.readLine();
-                    System.out.println();
-                    System.out.println("+========================================================+");
+                        System.out.println("Anda Memilih Lanjutkan Peminjaman");                        
+                    do {
+                        // Farden Ramzy Muharram
+                        System.out.println();
+                        System.out.println("Form Data Diri..");
+                        System.out.println("+========================================================+");
+                        System.out.println("           Dimohon Untuk Mengisi Data Diri Anda");
+                        System.out.println("+========================================================+");
+                        System.out.println();
+                        System.out.print(" Silahkan Masukkan Nama Lengkap Anda   : ");
+                        namaPeminjam = brInput.readLine();
+                        System.out.print(" Silahkan Masukkan NPM Anda    : ");
+                        npmPeminjam = Long.valueOf(brInput.readLine());
+                        System.out.print(" Silahkan Masukkan Kelas Anda  : ");
+                        kelasPeminjam = brInput.readLine();
+                        System.out.print(" Silahkan Masukkan No.Tlp Anda : ");
+                        notlpPeminjam = Long.valueOf(brInput.readLine());
+                        System.out.print(" Silahkan Masukkan Program Studi Anda : ");
+                        prodiPeminjam = brInput.readLine();
+                        System.out.print(" Silahkan Masukkan Hari Peminjaman (Contoh : Senin) : ");
+                        hariPeminjam = brInput.readLine();
+                        System.out.print(" Silahkan Masukkan Jam Peminjaman (Contoh : 23.46) : ");
+                        waktuPeminjam = Double.parseDouble(brInput.readLine());
+                        System.out.print(" \nYakin Sudah Mengisi Data Diri Anda Dengan Benar (y/N): ");
+                        lanjut = brInput.readLine();
+                        System.out.println();
+                        System.out.println("+========================================================+");
 
-                    if (lanjut.equalsIgnoreCase("y")) {
-                        System.out.println("\nTerima Kasih Telah Mengisi Data Diri Anda");
-                    } else {
-                        System.out.println("\nSilahkan Masukkan Data Diri Anda Kembali Dengan Benar!");
-                    }
+                        if (lanjut.equalsIgnoreCase("y")) {
+                            System.out.println("        Terima Kasih Telah Mengisi Data Diri Anda");
+                            System.out.println("+========================================================+");
+                        } else {
+                            System.out.println(" \nSilahkan Masukkan Data Diri Anda Kembali Dengan Benar!");
+                        }
 
-                } while (lanjut.equalsIgnoreCase("n"));
-
-
+                    } while (lanjut.equalsIgnoreCase("n"));
+                
                 do {
                     System.out.println();
                     //Amelia Azra Pakaya
@@ -214,7 +215,7 @@ class App {
                     if (!(libraryBookInput == 1 || libraryBookInput == 2 || libraryBookInput == 3)) {
                         System.out.println("Pilihan Anda Tidak Valid!, Silahkan Coba Lagi [1/2/3]");
                     }
-                    
+
                     } while (!(libraryBookInput == 1 || libraryBookInput == 2 || libraryBookInput == 3));
                     
                     if (libraryBookInput == 1) {
